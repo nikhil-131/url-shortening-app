@@ -6,6 +6,11 @@ const app = express();
 const port = 3000;
 
 app.use(cors());
+
+app.use(cors({
+  origin: 'https://url-shortening-app-server.vercel.app/'
+}));
+
 app.use(express.json());
 
 const fetchData = async (urlLink) => {
