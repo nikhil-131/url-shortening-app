@@ -55,7 +55,7 @@ const ShortenSearch = () => {
     // console.log(userInputLink);
     if (userInputLink) {
       // console.log(JSON.stringify(userInputLink))
-      let response = await fetch("http://127.0.0.1:3000/", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userInputLink: userInputLink }) });
+      let response = await fetch("https://url-shortening-app-server.vercel.app/", { method: "POST", headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userInputLink: userInputLink }) });
       let link = await response.json();
       let obj = {
         id: uuidv4(),
